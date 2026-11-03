@@ -1,0 +1,19 @@
+{
+  "name": "@local/prism-theme",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "gh503",
+  "homepage": "https://github.com/gh503/dsh-prism-theme",
+  "repository": {"type": "git", "url": "https://github.com/gh503/dsh-prism-theme.git"},
+  "bugs": {"url": "https://github.com/gh503/dsh-prism-theme/issues"},
+  "engines": {"node": ">=22", "dsh": "0.2.1-rc.5"},
+  "keywords": ["deepseek-harness", "dsh", "theme", "light", "dark", "prism"],
+  "scripts": {"build": "node build.mjs", "test": "node verify.mjs", "check": "node --check index.js && node --check client.js && node verify.mjs"},
+  "dependencies": {"@deepseek-ai/schemastery": "3.18.5"},
+  "type": "module",
+  "description": "Prism Studio: playful light and dark themes with live editing and saved palettes.",
+  "exports": {".": "./index.js", "./client": "./client.js", "./locale/*.json": "./locale/*.json", "./icon": "./icon.svg"},
+  "files": ["index.js", "model.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg"],
+  "dsh": {"bundle": {"patch": "./cordis.patch.yml"}, "client": {"platform": "web", "immediately": true, "inject": ["@deepseek-ai/dsh-client-ui-theme", "@deepseek-ai/dsh-client-ui-settings"]}}
+}

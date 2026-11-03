@@ -1,0 +1,3 @@
+- insert:
+    - id: prism-theme
+      name: '@local/prism-theme'
