@@ -37,6 +37,7 @@
         ]
       },
       "versions": [
+        {"version":"1.1.0","publishTimestamp":1793706200,"engines":{"dsh":"0.2.1-rc.5"},"source":{"type":"git","url":"https://github.com/gh503/dsh-prism-theme.git","commit":"2d3bf092d850b00672c2ad21a021f9c160276b4b"}},
         {
           "version": "1.0.0",
           "publishTimestamp": 1793700081,
