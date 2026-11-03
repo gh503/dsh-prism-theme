@@ -1,7 +1,7 @@
 import z from '@deepseek-ai/schemastery';
 import { defaults, validateLibrary, themeSettings } from './model.js';
-const color = z.string().pattern(/^#[0-9a-fA-F]{6}$/);
-const theme = z.object({version:z.const(1),tokens:z.dict(z.object({light:color,dark:color})),preference:z.union(['light','dark','system']),fontSizes:z.object({text:z.number().step(1).min(10).max(22),code:z.number().step(1).min(10).max(16),terminal:z.number().step(1).min(10).max(20)}),fontFamilies:z.object({text:z.string(),code:z.string(),terminal:z.string()})});
+const color = z.string();
+const theme = z.object({version:z.union([1,2]),enabled:z.boolean().default(true),disabledTokens:z.array(z.string()).default([]),extraTokens:z.dict(z.object({light:color,dark:color})).default({}),tokens:z.dict(z.object({light:color,dark:color})),preference:z.union(['light','dark','system']),fontSizes:z.object({text:z.number().step(1).min(10).max(22),code:z.number().step(1).min(10).max(16),terminal:z.number().step(1).min(10).max(20)}),fontFamilies:z.object({text:z.string(),code:z.string(),terminal:z.string()})});
 export const Config = z.object({library:z.transform(z.object({current:theme,profiles:z.array(z.object({id:z.string(),name:z.string(),theme}))}),validateLibrary).default({current:defaults(),profiles:[]}).volatile()});
 export const inject = ['settings','tools'];
 export function apply(ctx) {

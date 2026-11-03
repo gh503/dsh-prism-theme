@@ -6,7 +6,7 @@
 
 浅色采用暖白与莓紫，深色采用墨紫与柔和亮色。所有设置集中在一个插件界面中，无需手写 CSS。
 
-[下载 v1.0.0 安装包](https://github.com/gh503/dsh-prism-theme/releases/download/v1.0.0/local-prism-theme-1.0.0.tgz) · [版本说明](https://github.com/gh503/dsh-prism-theme/releases/tag/v1.0.0) · [反馈问题](https://github.com/gh503/dsh-prism-theme/issues)
+[下载 v1.1.0 安装包](https://github.com/gh503/dsh-prism-theme/releases/download/v1.1.0/local-prism-theme-1.1.0.tgz) · [版本说明](https://github.com/gh503/dsh-prism-theme/releases/tag/v1.1.0) · [反馈问题](https://github.com/gh503/dsh-prism-theme/issues)
 
 | | 浅色 · 暖白昼光 | 深色 · 墨紫夜色 |
 |---|---|---|
@@ -19,7 +19,9 @@
 
 安装后打开 **设置 → 棱彩主题工作室**。
 
-- 14 个公开主题颜色项，明暗分别编辑，颜色选择器和 HEX 输入。
+- 14 个公开主题颜色项，明暗分别编辑，颜色选择器及 CSS 颜色输入（HEX、透明色、rgb/hsl 等）。
+- 每项继承底层主题、整体开关，以及高级 CSS 变量的明暗值编辑。
+- [官方接口覆盖与限制](API-COVERAGE.md)：高级变量只对当前界面实际使用的变量生效，不代表稳定的布局 API。
 - 浅色、深色、跟随系统；正文、代码、终端的字体与字号。
 - 配色即时预览；修改后约 300ms 自动保存到 Harness profile，字号与字体在保存确认后同步生效。
 - 将当前明暗配色及字体另存为命名主题，应用或删除已保存方案。
@@ -49,7 +51,9 @@ https://raw.githubusercontent.com/gh503/dsh-prism-theme/main/market/index.json
 **Prism Studio** is a theme editor for DeepSeek Harness. It pairs a warm cream light palette with a plum dark palette and lets you customize all 14 exposed theme colors, plus text, code and terminal typography.
 
 - Light, dark and system appearance modes.
-- Color picker and HEX input, with a primary-text contrast readout.
+- Color picker and CSS color text, per-token inheritance and an overall override switch.
+- Advanced paired CSS variables; see [API coverage and boundaries](API-COVERAGE.md).
+- Contrast readout only for supported opaque colors; v1 configurations migrate automatically.
 - Debounced autosave, named presets, JSON import/export and default reset.
 - Profile-wide persistent settings; no external fonts, analytics or remote assets.
 
