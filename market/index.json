@@ -1,0 +1,55 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Prism Studio Plugins",
+    "zh": "棱彩主题插件源"
+  },
+  "description": {
+    "en": "Independent Prism Studio theme index for DeepSeek Harness.",
+    "zh": "棱彩主题工作室独立维护的 Harness 插件索引。"
+  },
+  "plugins": [
+    {
+      "name": "@local/prism-theme",
+      "title": {
+        "en": "Prism Studio",
+        "zh": "棱彩主题工作室"
+      },
+      "description": {
+        "en": "Playful light and dark themes, 14 editable colors, typography controls and saved configurations.",
+        "zh": "活泼的明暗主题、14 项可编辑颜色、字体字号设置和可保存的主题方案。"
+      },
+      "author": "gh503",
+      "icon": "../icon.svg",
+      "homepage": "https://github.com/gh503/dsh-prism-theme",
+      "repository": {
+        "url": "https://github.com/gh503/dsh-prism-theme"
+      },
+      "metadata": {
+        "keywords": [
+          "theme",
+          "prism",
+          "light",
+          "dark",
+          "主题",
+          "棱彩",
+          "配色"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1793700081,
+          "engines": {
+            "dsh": "0.2.1-rc.5"
+          },
+          "source": {
+            "type": "git",
+            "url": "https://github.com/gh503/dsh-prism-theme.git",
+            "commit": "ab861e32acaf864e0b8143a2e6ec730219043e19"
+          }
+        }
+      ]
+    }
+  ]
+}
